@@ -1,0 +1,15 @@
+<%@ page pageEncoding="UTF-8" %>
+ <link type="text/css" rel="stylesheet" href="css/structCss.css">
+ 
+ <link type="text/css" rel="stylesheet" href="css/bootstrap/bootstrap.css">
+ <link type="text/css" rel="stylesheet" href="css/bootstrap/bootstrap.min.css">
+ 
+ <link type="text/css" rel="stylesheet" href="css/bootstrap/bootstrap-theme.css"> 
+ <link type="text/css" rel="stylesheet" href="css/bootstrap/bootstrap-theme.min.css">
+ 
+ <link type="text/css" rel="stylesheet" href="css/jquery-ui/jquery-ui.css">
+ <link type="text/css" rel="stylesheet" href="css/jquery-ui/jquery-ui.min.css">
+ <link type="text/css" rel="stylesheet" href="css/jquery-ui/jquery-ui.structure.css">
+ <link type="text/css" rel="stylesheet" href="css/jquery-ui/jquery-ui.structure.min.css">
+ <link type="text/css" rel="stylesheet" href="css/jquery-ui/jquery-ui.theme.css">
+ <link type="text/css" rel="stylesheet" href="css/jquery-ui/jquery-ui.theme.min.css">
