@@ -288,3 +288,11 @@ function initNewMsgBtn(){
         });
     });
 }
+function showMessageWindow(msgId){
+    var modal=new FieldlistModalWindow("Загрузка...");
+    var body=$("<div/>").appendTo(modal.contentPanel);
+    requesrExecutor("messageData",{id:msgId},function(msgdata){
+        modal.setTitle("Сообщение: "+msgdata.subject);
+    });
+    
+}

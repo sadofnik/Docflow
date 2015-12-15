@@ -44,6 +44,10 @@
         <servlet-name>addUrItem</servlet-name>
         <servlet-class>org.doverie.docflow.addUrItem</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>messageData</servlet-name>
+        <servlet-class>org.doverie.docflow.messageData</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>signin</servlet-name>
         <url-pattern>/signin</url-pattern>
@@ -87,6 +91,10 @@
     <servlet-mapping>
         <servlet-name>addUrItem</servlet-name>
         <url-pattern>/addUrItem</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>messageData</servlet-name>
+        <url-pattern>/messageData</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>
