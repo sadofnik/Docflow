@@ -58,7 +58,9 @@
             $("<th/>").appendTo(row).html("Тип");
             $("<th/>").appendTo(row).html("Сообщение");
             for(var i=0;i<arr.length;i++){
-                row=$("<tr/>").appendTo(table);    
+                row=$("<tr/>").appendTo(table).prop("id",arr[i].id).click(function(){
+                    showMessageWindow(this.id);
+                });    
                 var msg=arr[i];
                 $("<td/>").appendTo(row).html(msg.fromid); 
                 $("<td/>").appendTo(row).html(msg.type); 

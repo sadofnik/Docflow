@@ -16,15 +16,13 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 import org.json.JSONArray;
 import org.json.JSONObject;
 
-/**
- *
- * @author Игорь
- */
 public class searchrealty extends HttpServlet {
-
+    private HttpSession session=null;
+    private String json = "{}";
     /**
      * Processes requests for both HTTP
      * <code>GET</code> and
@@ -37,12 +35,15 @@ public class searchrealty extends HttpServlet {
      */
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        //response.setContentType("text/html;charset=UTF-8");
+        
         response.setContentType("application/json");
         PrintWriter out = response.getWriter();
-        
+        session=request.getSession();
+        if(session.getAttribute("userid")==null){
+            response.sendRedirect("index.jsp");
+        }
         BufferedReader br = new BufferedReader(new InputStreamReader(request.getInputStream()));
-        String json = "";
+
         if(br != null){
             json = br.readLine();
         }
