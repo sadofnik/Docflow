@@ -20,13 +20,9 @@ import javax.servlet.http.HttpSession;
 import org.json.JSONArray;
 import org.json.JSONObject;
 
-/**
- *
- * @author Игорь
- */
 public class searchcorplist extends HttpServlet {
     private HttpSession session;
-    String json = "{}";
+    private String json = "{}";
 
     /**
      * Processes requests for both HTTP

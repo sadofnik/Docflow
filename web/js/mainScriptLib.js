@@ -293,6 +293,39 @@ function showMessageWindow(msgId){
     var body=$("<div/>").appendTo(modal.contentPanel);
     requesrExecutor("messageData",{id:msgId},function(msgdata){
         modal.setTitle("Сообщение: "+msgdata.subject);
+        var bodyHeader=$("<div/>").appendTo(body);
+        
+        $("<div/>").appendTo(bodyHeader)
+                .append($("<span/>").html("От:"))
+                .append($("<span/>").html(msgdata.from));    
+        
+        var bodyContent=$("<div/>").appendTo(body);
+        $("<div/>").appendTo(bodyContent)
+                .append(
+                $("<div/>").html(msgdata.body)
+                );
+        if(typeof(msgdata.itemList)){
+            if(msgdata.itemList.length>0){
+                var itemPanel=$("<div/>").appendTo(bodyContent).prop("id","msgItemTable").css({display:"table"});
+                for(var i=0;i<msgdata.itemList.length;i++){
+                    requesrExecutor("getRealtyData",{realty:msgdata.itemList[i]},function(rdata){
+                        var cont=$("<div/>").css({display:"table-row"}).appendTo("#msgItemTable");
+                        
+                        $("<div/>").css({display:"table-cell"}).appendTo(cont).append(
+                            $("<input/>").prop("id",rdata.id).prop("type","checkbox").addClass("msgItempanelList")
+                           );
+                        
+                        $("<div/>").css({display:"table-cell"}).appendTo(cont).html(rdata.type);
+                        $("<div/>").css({display:"table-cell"}).appendTo(cont).html(rdata.area);
+                        $("<div/>").css({display:"table-cell"}).appendTo(cont).html(rdata.cost);
+                        $("<div/>").css({display:"table-cell"}).appendTo(cont).html(rdata.operation);
+                        $("<div/>").css({display:"table-cell"}).appendTo(cont).html(rdata.region);
+                        $("<div/>").css({display:"table-cell"}).appendTo(cont).html(rdata.adres);
+                        $("<div/>").css({display:"table-cell"}).appendTo(cont).html(rdata.description);
+                    });
+                }
+            }
+        }
     });
     
 }

@@ -1,7 +1,9 @@
 /*
- * To change this template, choose Tools | Templates
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
+
 package org.doverie.docflow;
 
 import java.io.BufferedReader;
@@ -17,17 +19,18 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
-import org.json.JSONArray;
 import org.json.JSONObject;
 
-
-public class messageData extends HttpServlet {
-    private HttpSession session=null;
+/**
+ *
+ * @author ioigrevskiy
+ */
+public class getRealtyData extends HttpServlet {
+    private HttpSession session;
     private String json = "{}";
     /**
-     * Processes requests for both HTTP
-     * <code>GET</code> and
-     * <code>POST</code> methods.
+     * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
+     * methods.
      *
      * @param request servlet request
      * @param response servlet response
@@ -53,12 +56,12 @@ public class messageData extends HttpServlet {
         } catch (ParseException ex) {
             Logger.getLogger(getRealtyData.class.getName()).log(Level.SEVERE, null, ex);
         }
+        
     }
 
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">
     /**
-     * Handles the HTTP
-     * <code>GET</code> method.
+     * Handles the HTTP <code>GET</code> method.
      *
      * @param request servlet request
      * @param response servlet response
@@ -72,8 +75,7 @@ public class messageData extends HttpServlet {
     }
 
     /**
-     * Handles the HTTP
-     * <code>POST</code> method.
+     * Handles the HTTP <code>POST</code> method.
      *
      * @param request servlet request
      * @param response servlet response
@@ -95,4 +97,5 @@ public class messageData extends HttpServlet {
     public String getServletInfo() {
         return "Short description";
     }// </editor-fold>
+
 }
