@@ -52,6 +52,10 @@
         <servlet-name>getRealtyData</servlet-name>
         <servlet-class>org.doverie.docflow.getRealtyData</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>setRealtySaleStatus</servlet-name>
+        <servlet-class>org.doverie.docflow.setRealtySaleStatus</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>signin</servlet-name>
         <url-pattern>/signin</url-pattern>
@@ -103,6 +107,10 @@
     <servlet-mapping>
         <servlet-name>getRealtyData</servlet-name>
         <url-pattern>/getRealtyData</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>setRealtySaleStatus</servlet-name>
+        <url-pattern>/setRealtySaleStatus</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

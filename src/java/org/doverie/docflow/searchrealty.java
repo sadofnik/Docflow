@@ -54,7 +54,7 @@ public class searchrealty extends HttpServlet {
             String query="SELECT * FROM realtylist WHERE ";
             String queryParam="";
             //areaparametr
-            JSONArray areas=req.getJSONArray("area");
+            JSONArray areas=req.getJSONArray("area");            
             String areaSql="";
             for(int i=0;i<areas.length();i++){
                 if(!areaSql.equals("")){ areaSql+=" OR ";}else{areaSql+="(";}
@@ -63,6 +63,17 @@ public class searchrealty extends HttpServlet {
             }
             if(!areaSql.equals("")){areaSql+=")";}
             queryParam+=areaSql;
+            
+            //saleStatus
+            JSONArray sale=req.getJSONArray("saleStatus");
+            String saleSql="";
+            if(sale.length()!=0){
+                saleSql="(saleStatus != \"\" OR saleStatus IS NOT NULL)";
+            }else{
+                saleSql="(saleStatus = \"\" OR saleStatus IS NULL)";
+            }
+            //if(!saleSql.equals("")){saleSql+=")";}
+            queryParam+=saleSql;
             
             //typeparametr
             JSONArray types=req.getJSONArray("type");

@@ -28,8 +28,12 @@
                     <input style="width:100px;" class="input-sm radiantBorder realtyparam" name="costmin" placeholder="От">-
                     <input style="width:100px;" class="input-sm radiantBorder realtyparam" name="costmax" placeholder="До"> 
                     <br>
+                    <div>
                     <label class="checkbox-inline"><input name="operation" class="realtyparam" type="checkbox" value="Продажа"/>Покупка</label>
                     <label class="checkbox-inline"><input name="operation" class="realtyparam" type="checkbox" value="Аренда"/>Аренда</label>
+                    </div><div>
+                    <label class="checkbox-inline"><input name="saleStatus" class="realtyparam" type="checkbox" value="Показать проданное"/>Показать проданное</label>
+                    </div>
                 </div>  
                 <div class="col-sm-3">
                     <h4>Округ:</h4>
@@ -110,6 +114,7 @@
         $("<td/>").appendTo(row).html("Регион");
         $("<td/>").appendTo(row).html("Адрес");
         $("<td/>").appendTo(row).html("Описание");
+        $("<td/>").appendTo(row).html("sale");
         for(var i=0;i<data.length;i++){
             var item=data[i];
             row=$("<tr/>").appendTo(table);
@@ -142,7 +147,24 @@
             $("<td/>").appendTo(row).html(item.region);
             $("<td/>").appendTo(row).html(item.adres);
             $("<td/>").appendTo(row).html(item.description);
+            $("<td/>").appendTo(row).append(function(){
+                var checkbox=$("<input type=\"checkbox\"/>").attr("id",item.id);
+                if(typeof(item.salestatus)!=="undefined"){   
+                    if(item.salestatus!=""){
+                        checkbox.prop("checked", true);
+                    }
                 }
+                checkbox.change(function(){
+                    var data={};
+                    data.id=this.id;
+                    data.status=$(this).prop("checked");
+                    
+                    requesrExecutor("setRealtySaleStatus",data, function(){});
+                });
+                return checkbox;
+            });
+         
+        }
             }
         </script>
     </body>
