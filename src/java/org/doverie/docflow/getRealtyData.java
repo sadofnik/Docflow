@@ -23,7 +23,7 @@ import org.json.JSONObject;
 
 /**
  *
- * @author ioigrevskiy
+ * @author Александр
  */
 public class getRealtyData extends HttpServlet {
     private HttpSession session;

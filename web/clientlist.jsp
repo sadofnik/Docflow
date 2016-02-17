@@ -1,7 +1,7 @@
 <%-- 
     Document   : clientlist
     Created on : 07.11.2015, 11:16:57
-    Author     : Игорь
+    Author     : Александр
 --%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
@@ -61,6 +61,7 @@
             </div>
         </div>
         <%@include file="WEB-INF/jspf/bottomIncludeFrg.jspf" %>
+        
         <script>
             $(document).ready(function(){
                 initAddFizItemBtn();

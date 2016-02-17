@@ -24,7 +24,7 @@ import org.json.JSONObject;
 
 /**
  *
- * @author Игорь
+ * @author Александр
  */
 public class addnewuser extends HttpServlet {
     private HttpSession session;

@@ -28,7 +28,7 @@
                     <input style="width:100px;" class="input-sm radiantBorder realtyparam" name="costmin" placeholder="От">-
                     <input style="width:100px;" class="input-sm radiantBorder realtyparam" name="costmax" placeholder="До"> 
                     <br>
-                    <label class="checkbox-inline"><input name="operation" class="realtyparam" type="checkbox" value="Покупка"/>Покупка</label>
+                    <label class="checkbox-inline"><input name="operation" class="realtyparam" type="checkbox" value="Продажа"/>Покупка</label>
                     <label class="checkbox-inline"><input name="operation" class="realtyparam" type="checkbox" value="Аренда"/>Аренда</label>
                 </div>  
                 <div class="col-sm-3">
@@ -102,7 +102,8 @@
                 //table header
                 
                 var row=$("<tr/>").appendTo(table).css({"font-weight": "bold"});
-        $("<td/>").appendTo(row).html("");        
+        $("<td/>").appendTo(row).html("");
+        $("<td/>").appendTo(row).html("#");
         $("<td/>").appendTo(row).html("Площадь");
         $("<td/>").appendTo(row).html("Цена");
         $("<td/>").appendTo(row).html("Тип");
@@ -134,9 +135,10 @@
                     $("#sendSelected").removeClass("disabled")
                 }
                 }));
+            $("<td/>").appendTo(row).html(item.id);
             $("<td/>").appendTo(row).html(item.area);
             $("<td/>").appendTo(row).html(item.cost);
-            $("<td/>").appendTo(row).html(item.type+" "+item.operation);
+            $("<td/>").appendTo(row).html(item.type+" / "+item.operation);
             $("<td/>").appendTo(row).html(item.region);
             $("<td/>").appendTo(row).html(item.adres);
             $("<td/>").appendTo(row).html(item.description);

@@ -20,7 +20,7 @@ import org.json.JSONObject;
 
 /**
  *
- * @author admin
+ * @author Александр
  */
 public class addFizItem extends HttpServlet {
      private HttpSession session;

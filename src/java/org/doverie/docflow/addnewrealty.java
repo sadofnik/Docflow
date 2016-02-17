@@ -19,7 +19,7 @@ import org.json.JSONObject;
 
 /**
  *
- * @author Игорь
+ * @author Александр
  */
 public class addnewrealty extends HttpServlet {
     private HttpSession session;

@@ -1,7 +1,7 @@
 <%-- 
     Document   : corplist
     Created on : 07.11.2015, 11:25:43
-    Author     : Игорь
+    Author     : Александр
 --%>
 
 <%@page import="java.util.Vector"%>

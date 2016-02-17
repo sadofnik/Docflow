@@ -50,6 +50,8 @@ public class messageData extends HttpServlet {
         try {
             JSONObject req=new JSONObject(URLDecoder.decode(json, "UTF-8"));
             MySQLConnect con=new MySQLConnect("localhost", "docflow", "3306", "reader", "1");
+            
+            
         } catch (ParseException ex) {
             Logger.getLogger(getRealtyData.class.getName()).log(Level.SEVERE, null, ex);
         }

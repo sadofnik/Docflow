@@ -20,7 +20,7 @@ import org.json.JSONObject;
 
 /**
  *
- * @author Игорь
+ * @author Александр
  */
 public class sendmessage extends HttpServlet {
     private HttpSession session;

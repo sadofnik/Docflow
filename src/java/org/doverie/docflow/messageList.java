@@ -20,7 +20,7 @@ import org.json.JSONObject;
 
 /**
  *
- * @author admin
+ * @author Александр
  */
 public class messageList extends HttpServlet {
 

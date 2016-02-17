@@ -23,7 +23,7 @@ import org.json.JSONObject;
 
 /**
  *
- * @author admin
+ * @author Александр
  */
 public class searchcontragent extends HttpServlet {
 

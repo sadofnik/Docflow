@@ -16,7 +16,7 @@ import javax.servlet.http.HttpSession;
 
 /**
  *
- * @author Игорь
+ * @author Александр
  */
 public class signin extends HttpServlet {
 
